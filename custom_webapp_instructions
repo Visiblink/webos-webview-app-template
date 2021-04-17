@@ -1,0 +1,47 @@
+Custom WebApp Instructions
+
+
+
+To make your web app, you need to do the following things:
+
+
+
+1. Download the app from GitHub, using the "Clone or download" dropdown menu at the top right. Select "Download ZIP." Extract the contents of the .zip file to the directory of your choice.
+
+
+
+2. Edit the appinfo.json file.
+
+Change the id to something unique, but retain the com.vendorname.appname format.
+Change the vendor to you.
+Change the title to whatever you want it to be. 
+
+
+
+3. You can replace the existing icon.png file with your own icon. I think it has to be 48x48. It definitely has to be in png format and be called icon.png
+
+
+
+4. Edit line 5 of the index.html file to reflect your app's name.
+
+
+ 
+5. Edit line 20 of the main-assistant.js file in ~/app/assistants and substitute your URL (web address) where you see http://www.google.ca 
+
+Your address goes inside the quotation marks. Don't remove those quotation marks. 
+
+If you want the webview to display your own html/css/javascript files, and want to include those files within this app, there are instructions in the main-assistant.js file. Note that it is not currently possible to store regular cookies related to a local file. If you need to do that, you'll have to host your web app on a remote server, and direct the webview to that server. Or you can figure out how to store cookies the Mojo way.
+
+
+
+6. Package the app with Jason Robitaille's IpkPackager.jar or the Palm webOS SDK. The IpkPackager is a lot smaller and easy to use. See https://forums.webosnation.com/canuck-coding/237326-ipk-packager.html
+
+
+
+7. Instructions for using the Ipk Packager:
+
+The Ipk Packager is a java .jar file. So you'll need to install java to run it, and then look for some instructions on how to run a .jar file on your operating system. On Linux, you open a console, navigate to the folder with the Ipk Packager in it, and then type java -jar IpkPackager.jar 
+
+Once Ipk Packager is running, click on the three dots beside the folder box, find the folder for your app (which will be named "template_webview_app-master" if you downloaded it from GitHub, but you should ultimately change it to reflect your app's name), and all the fields should fill themselves in. Then just hit the "Create IPK File" button.
+
+After that, install the .ipk in the regular way.

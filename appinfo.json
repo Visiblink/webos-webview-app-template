@@ -1,0 +1,9 @@
+{
+	"id": "com.template.webview-app",
+	"version": "1.0.0",
+	"vendor": "Your Name Here",
+	"type": "web",
+	"main": "index.html",
+	"title": "Webview App",
+	"icon": "icon.png"
+}
